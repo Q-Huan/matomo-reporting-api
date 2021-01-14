@@ -1,6 +1,8 @@
 # Matomo Reporting API
 
 (former Piwik Reporting API)
+> forked from https://github.com/pfrenssen/matomo-reporting-api
+> modified depends to compatible with morden frameworks
 
 This library allows to retrieve data from the [Matomo](https://matomo.org) open
 source web analytics platform using the [Matomo Reporting
