@@ -71,9 +71,12 @@ class MatomoMagicCall extends QueryFactory
 
     public function __call($name,$arguments){
         $this->setMethodName($name);
-
         $methodName = "{$this->getModuleName()}.{$this->getMethodName()}";
         $query = $this->getQuery($methodName);
+
+        if(isset($arguments[0]) && is_array($arguments[0])){
+            $query->setParameters($arguments[0]);
+        }
 
         return $query;
     }
